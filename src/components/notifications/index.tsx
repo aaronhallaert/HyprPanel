@@ -25,7 +25,7 @@ export default (): JSX.Element => {
         [bind(hyprlandService, 'focusedMonitor'), bind(monitor), bind(active_monitor)],
         (focusedMonitor, monitor, activeMonitor) => {
             if (activeMonitor === true) {
-                return focusedMonitor.id;
+                return focusedMonitor.id - 1;
             }
             return monitor;
         },

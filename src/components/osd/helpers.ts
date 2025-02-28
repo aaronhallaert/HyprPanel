@@ -63,7 +63,7 @@ export const getOsdMonitor = (): Variable<number> => {
         [bind(hyprlandService, 'focusedMonitor'), bind(monitor), bind(active_monitor)],
         (currentMonitor, defaultMonitor, followMonitor) => {
             if (followMonitor === true) {
-                return currentMonitor.id;
+                return currentMonitor.id - 1;
             }
 
             return defaultMonitor;
